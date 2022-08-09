@@ -1,0 +1,15 @@
+num=input("Enter the number here:").split()
+for i in range(0,len(num)):
+    num[i]=float(num[i])
+counter=0
+Total=0
+
+dev=0
+for numbers in num:
+    counter+=1
+    Total+=numbers
+mean=float(Total/counter)
+for numbers in num:
+    dev+=(numbers-mean)**2
+standard_deviation=(dev/counter)**0.5
+print(f"The standard deviation of the numbers entered is: {round(standard_deviation,3)}")
